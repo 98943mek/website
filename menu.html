@@ -13,6 +13,7 @@
             function displayContent(x)
             {
                 console.log(x);
+                document.getElementById("right").innerHTML = x;
             }
             
             function addToTree(data, curr, treeObj)
@@ -21,7 +22,7 @@
                 
                 if(data[curr].numChildren == 0)
                 {
-                    $("#" + treeObj).append("<li><p onClick='console.log(" + curr + ")'>" + data[curr].text + "</p></li>");
+                    $("#" + treeObj).append("<li><p onClick='displayContent(" + curr + ")'>" + data[curr].text + "</p></li>");
                 } else {
                     if(curr != 0)
                     {
