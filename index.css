@@ -2,6 +2,24 @@
 	/*border: 2px dotted #aaaaaa;*/
 }
 
+
+/* BEGIN HEADER */
+#upper #container ul li {
+	font-family: Verdana;
+	color: white;
+	display : inline;
+	margin-left: 10px;
+	text-align: left;
+}
+
+#upper #container ul {
+	text-align: right;
+	margin-right: 20px;
+}
+
+/* END HEADER */
+
+
 div {
 	border-radius: 10px;
 }
@@ -17,6 +35,7 @@ div {
 
 .middle {
 	margin-top: 40px;
+	height: 500px;
 	position: relative;
 }
 
@@ -35,10 +54,20 @@ div {
 }
 
 #bottom {
+	border-radius: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -10px;
 	position: relative;
-	height : 100px;
+	height : 180px;
 	clear: both;
-	background-color: #668284;
+	background-color: #959595;
+}
+
+#bottom p {
+	font-size: 10px;
+	font-family: Euclid;
+	margin: 10px 10px 10px 10px;
 }
 
 #right h1 {
