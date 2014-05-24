@@ -41,3 +41,8 @@ div {
 	clear: both;
 	background-color: #668284;
 }
+
+ul.circle
+{
+    list-style-type: circle;    
+}
