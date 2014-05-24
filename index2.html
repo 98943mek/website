@@ -2,7 +2,55 @@
 <html>
 	<head>
 		<link href="index2.css" type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 		<title>main</title>
+
+		<script>
+		function displayContent(x)
+            {
+                console.log(x);
+                document.getElementById("right").innerHTML = x;
+            }
+            
+            function addToTree(data, curr, treeObj)
+            {
+                console.log("addToTree(" + curr + "," + treeObj + ")");
+                
+                if(data[curr].numChildren == 0)
+                {
+                    $("#" + treeObj).append("<li><p onClick='displayContent(" + curr + ")'>" + data[curr].text + "</p></li>");
+                } else {
+                    if(curr != 0)
+                    {
+                        $("#" + treeObj).append("<li>" + data[curr].text + "</li>");
+                    }
+                    
+                    $("#" + treeObj).append("<ul class='circle' id='ul" + window.ulIdCnt + "'></ul>")
+                    
+                    var keep = window.ulIdCnt++;
+                    
+                    for(var i = 0; i < data[curr].numChildren; i++)
+                    {
+                        addToTree(data,data[curr].children[i],"ul" + keep);
+                    }
+                }
+            }
+            
+            $(document).ready(
+                function()
+                {
+                    $.ajax
+                    ({
+                        url: "menu.json",
+                        dataType: "json",
+                        success: function(res)
+                        {
+                            window.ulIdCnt = 0;
+                            addToTree(res.data,0,"menuDiv");
+                        }
+                    })
+                });
+		</script>
 	</head>
 
 	<body>
@@ -19,7 +67,9 @@
 		</div>
 
 		<div id="left" class="middle">
-            <object type="text/html" data="menu.html"></object>
+          	<div id="menuDiv">
+
+          	</div>
 		</div>
 		
 		<div id="right" class="middle">
