@@ -8,24 +8,21 @@
 		<script>
 		  function displayContent(x)
             {
-                console.log(x);
                 $("#right").load(x);
             }
             
             function addToTree(data, curr, treeObj)
             {
-                console.log("addToTree(" + curr + "," + treeObj + ")");
-                
                 if(data[curr].numChildren == 0)
                 {
-                    $("#" + treeObj).append("<li><p onClick='displayContent(\"" + data[curr].fileName + "\")'>" + data[curr].text + "</p></li>");
+                    $("#" + treeObj).append("<li><p class='actAsLink' onClick='displayContent(\"" + data[curr].fileName + "\")'>" + data[curr].text + "</p></li>");
                 } else {
                     if(curr != 0)
                     {
-                        $("#" + treeObj).append("<li>" + data[curr].text + "</li>");
+                        $("#" + treeObj).append("<li class='actAsCategory'>" + data[curr].text + "</li>");
                     }
                     
-                    $("#" + treeObj).append("<ul class='circle' id='ul" + window.ulIdCnt + "'></ul>")
+                    $("#" + treeObj).append("<ul class='ulClass' id='ul" + window.ulIdCnt + "'></ul>")
                     
                     var keep = window.ulIdCnt++;
                     
@@ -39,15 +36,12 @@
             $(document).ready(
                 function()
                 {
-                    console.log("load json");
-                    
                     $.ajax
                     ({
                         url: "menu.json",
                         dataType: "json",
                         success: function(res)
                         {
-                            console.log("json loaded");
                             window.ulIdCnt = 0;
                             addToTree(res.data,0,"menuDiv");
                         }
@@ -58,13 +52,7 @@
 
 	<body style>
 		<div id="upper">
-			<div id="container">
-				<ul>
-					<li>Home</li>
-					<li> | </li>
-					<li>[1111110111] ABCDEFF DFSKFJDSKLFJDA</li>
-				</ul>
-			</div>
+            
 		</div>
 
 		<div id="left" class="middle">
@@ -77,32 +65,7 @@
 		</div>
 
 		<footer id="bottom">
-			<div class="container">
-				<p>
-				<br>
-				The MIT License (MIT) <br>	
-				<br>
-				Copyright (c) 2014 <br>
-
-				Permission is hereby granted, free of charge, to any person obtaining a copy
-				of this software and associated documentation files (the "Software"), to deal
-				in the Software without restriction, including without limitation the rights
-				to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-				copies of the Software, and to permit persons to whom the Software is
-				furnished to do so, subject to the following conditions:
-				<br><br>
-				The above copyright notice and this permission notice shall be included in
-				all copies or substantial portions of the Software.
-				<br><br>
-				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-				IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-				FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-				THE SOFTWARE.
-				</p>
-			</div>
+            
 		</footer>
 	</body>
 </html> 
