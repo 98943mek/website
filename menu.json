@@ -1,0 +1,25 @@
+{
+    "data":
+    [
+        {
+            "text": "",
+            "numChildren": 1,
+            "children": [1]
+        },
+        {
+            "text": "TestMenu",
+            "numChildren": 2,
+            "children": [2,3]
+        },
+        {
+            "text": "Test1",
+            "numChildren": 0,
+            "children": []
+        },
+        {
+            "text": "Test2",
+            "numChildren": 0,
+            "children": []
+        }
+    ]
+}

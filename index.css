@@ -1,0 +1,75 @@
+* {
+	/*border: 2px dotted #aaaaaa;*/
+}
+
+div {
+	border-radius: 10px;
+}
+
+#upper {
+	height: 50px;
+	background-color: #4c4c4c;
+	width: 98.5%;
+	position: fixed;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+
+.middle {
+	margin-top: 40px;
+	position: relative;
+}
+
+#left {
+	float: left;
+	background-color: #b9d7d9;
+	width: 21%;
+	margin-bottom: 10px;
+}
+
+#right {
+	float: right;
+	background-color: #f4ebc3;
+	width: 78%;
+	margin-bottom: 10px;
+}
+
+#bottom {
+	position: relative;
+	height : 100px;
+	clear: both;
+	background-color: #668284;
+}
+
+#right h1 {
+	font-family: Euclid;
+	margin-left: 50px;
+}
+
+#right p {
+	font-family: Euclid;
+	margin-left: 50px;
+}
+
+
+/* superscript text */
+sup {
+	font-size: 70%;
+	vertical-align: top;
+}
+
+/* subscript text */
+sub {
+	font-size: 40%;
+	vertical-align: bottom;
+}
+
+/* CODE C++ */
+.pastie {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.allcode {
+	font-size: 12px;
+}

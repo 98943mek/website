@@ -1,0 +1,29 @@
+* {
+border: 2px dotted #aaaaaa;
+}
+
+#upper {
+height: 30px;
+}
+
+#center {
+height: 800px;
+}
+
+#c-left {
+   height: 800px;
+width: 20%;
+float: left;
+}
+
+
+#c-right {
+   height: 800px;
+   width: 79%;
+float: right;
+}
+
+
+#bottom {
+height : 100px;
+}
