@@ -1,0 +1,108 @@
+* {
+	/*border: 2px dotted #aaaaaa;*/
+}
+
+
+/* BEGIN HEADER */
+#upper #container ul li {
+	font-family: Verdana;
+	color: white;
+	display : inline;
+	margin-left: 10px;
+	text-align: left;
+}
+
+#upper #container ul {
+	text-align: right;
+	margin-right: 20px;
+}
+
+/* END HEADER */
+body {
+	width: 100%;
+	min-width: 600px;
+}
+
+div {
+	border-radius: 10px;
+}
+
+#upper {
+	height: 50px;
+	background-color: #4c4c4c;
+	width: 98.5%;
+	position: fixed;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+
+.middle {
+	position: relative;
+	margin-top: 40px;
+}
+
+#left {
+	float: left;
+	background-color: #b9d7d9;
+	width: 21%;
+	min-width: 250px;
+	margin-bottom: 10px;
+}
+
+#right {
+	float: right;
+	background-color: #f4ebc3;
+	max-width: 78%;
+	margin-bottom: 10px;
+}
+
+#bottom {
+	position: relative;
+	border-radius: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+
+	height: auto !important;
+	clear: both;
+	background-color: #959595;
+}
+
+#bottom p {
+	font-size: 10px;
+	font-family: Euclid;
+	margin: 10px 10px 10px 10px;
+}
+
+#right h1 {
+	font-family: Euclid;
+	margin-left: 50px;
+}
+
+#right p {
+	font-family: Euclid;
+	margin-left: 50px;
+}
+
+
+/* superscript text */
+sup {
+	font-size: 70%;
+	vertical-align: top;
+}
+
+/* subscript text */
+sub {
+	font-size: 40%;
+	vertical-align: bottom;
+}
+
+/* CODE C++ */
+.pastie {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.allcode {
+	font-size: 12px;
+}
