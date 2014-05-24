@@ -9,7 +9,8 @@
         {
             "text": "Updates",
             "numChildren": 0,
-            "children": []
+            "children": [],
+            "fileName": "updates.html"
         },
         {
             "text": "Sorting Algorithms",
@@ -19,7 +20,8 @@
         {
             "text": "Quicksort",
             "numChildren": 0,
-            "children": []
+            "children": [],
+            "fileName": "quicksort.html"
         }
     ]
 }
