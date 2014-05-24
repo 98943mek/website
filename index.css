@@ -18,7 +18,10 @@
 }
 
 /* END HEADER */
-
+body {
+	width: 100%;
+	min-width: 600px;
+}
 
 div {
 	border-radius: 10px;
@@ -34,32 +37,33 @@ div {
 }
 
 .middle {
-	margin-top: 40px;
-	height: 500px;
 	position: relative;
+	margin-top: 40px;
 }
 
 #left {
 	float: left;
 	background-color: #b9d7d9;
 	width: 21%;
+	min-width: 250px;
 	margin-bottom: 10px;
 }
 
 #right {
 	float: right;
 	background-color: #f4ebc3;
-	width: 78%;
+	max-width: 78%;
 	margin-bottom: 10px;
 }
 
 #bottom {
+	position: relative;
 	border-radius: 0px;
 	margin-left: -10px;
 	margin-right: -10px;
 	margin-bottom: -10px;
-	position: relative;
-	height : 180px;
+
+	height: auto !important;
 	clear: both;
 	background-color: #959595;
 }
