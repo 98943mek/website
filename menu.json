@@ -18,10 +18,10 @@
             "children": [3]
         },
         {
-            "text": "Quicksort",
+            "text": "Quicksort - First Element as Pivot",
             "numChildren": 0,
             "children": [],
-            "fileName": "quicksort.html"
+            "fileName": "quicksortfirstelementaspivot.html"
         }
     ]
 }
