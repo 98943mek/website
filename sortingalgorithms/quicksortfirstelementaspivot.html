@@ -1,0 +1,86 @@
+<div style="margin-left: 30px; margin-right: 30px; margin-bottom: 30px; text-align: justify;">
+    <h1>Quicksort - First Element as Pivot</h1>
+			<p> Quicksort, or partition-exchange sort, is a sorting algorithm developed by Tony Hoare that, on average, makes O(n log n) comparisons to sort n items. In the worst case, it makes O(n<sup>2</sup>) comparisons, though this behavior is rare. Quicksort is often faster in practice than other O(n log n) algorithms. Additionally, quicksort's sequential and localized memory references work well with a cache. Quicksort is a comparison sort and, in efficient implementations, is not a stable sort. Quicksort can be implemented with an in-place partitioning algorithm, so the entire sort can be done with only O(log n) additional space used by the stack during the recursion.</p>
+    
+    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">void</span> <span style="color: #a6e22e">quicksort_first_element_as_pivot</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">s,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">e)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(s</span> <span style="color: #f92672">&gt;=</span> <span style="color: #f8f8f2">e)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">piv</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">inp[s],fp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">s,lp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">e,tmp;</span>
+
+    <span style="color: #66d9ef">while</span><span style="color: #f8f8f2">(fp</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">lp)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">while</span><span style="color: #f8f8f2">(fp</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">lp</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">inp[fp]</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">piv)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">fp</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">while</span><span style="color: #f8f8f2">(fp</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">lp</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">inp[lp]</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">piv)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">lp</span><span style="color: #f92672">--</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(fp</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">lp)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">tmp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">inp[fp];</span>
+            <span style="color: #f8f8f2">inp[fp]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">inp[lp];</span>
+            <span style="color: #f8f8f2">inp[lp]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">tmp;</span>
+            <span style="color: #f8f8f2">fp</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">lp</span><span style="color: #f92672">--</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(fp</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">lp)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">quicksort_first_element_as_pivot(s,fp);</span>
+        <span style="color: #f8f8f2">quicksort_first_element_as_pivot(fp</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,e);</span>
+    <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">quicksort_first_element_as_pivot(s,lp);</span>
+        <span style="color: #f8f8f2">quicksort_first_element_as_pivot(fp,e);</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+</pre></td></tr></table></div>
+
+</div>

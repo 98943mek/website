@@ -15,13 +15,14 @@
         {
             "text": "Sorting Algorithms",
             "numChildren": 1,
-            "children": [3]
+            "children": [3],
+            "fileName": "sortingalgorithms/sortingalgorithms.html"
         },
         {
             "text": "Quicksort - First Element as Pivot",
             "numChildren": 0,
             "children": [],
-            "fileName": "quicksortfirstelementaspivot.html"
+            "fileName": "sortingalgorithms/quicksortfirstelementaspivot.html"
         }
     ]
 }

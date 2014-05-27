@@ -19,7 +19,7 @@
                 } else {
                     if(curr != 0)
                     {
-                        $("#" + treeObj).append("<li class='actAsCategory'>" + data[curr].text + "</li>");
+                        $("#" + treeObj).append("<li><p class='actAsLink' onClick='displayContent(\"" + data[curr].fileName + "\")'>" + data[curr].text + "</p></li>");
                     }
                     
                     $("#" + treeObj).append("<ul class='ulClass' id='ul" + window.ulIdCnt + "'></ul>")
