@@ -4,6 +4,7 @@
 using namespace std;
 
 int inp[10000010];
+int cmp,swp;
 
 void quicksort_first_element_as_pivot(int s, int e)
 {
@@ -18,11 +19,13 @@ void quicksort_first_element_as_pivot(int s, int e)
     {
         while(fp < lp && inp[fp] < piv)
         {
+            cmp++;
             fp++;
         }
 
         while(fp < lp && inp[lp] > piv)
         {
+            cmp++;
             lp--;
         }
 
@@ -33,6 +36,7 @@ void quicksort_first_element_as_pivot(int s, int e)
             inp[lp] = tmp;
             fp++;
             lp--;
+            swp++;
         }
     }
 
@@ -67,5 +71,5 @@ int main()
 
     ends = clock();
 
-    printf("%lf",(double)(ends - start) / CLOCKS_PER_SEC);
+    printf("%lf\n%d comparisons\n%d swaps",(double)(ends - start) / CLOCKS_PER_SEC,cmp,swp);
 }

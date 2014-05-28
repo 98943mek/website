@@ -14,8 +14,8 @@
         },
         {
             "text": "Sorting Algorithms",
-            "numChildren": 1,
-            "children": [3],
+            "numChildren": 2,
+            "children": [3,4],
             "fileName": "sortingalgorithms/sortingalgorithms.html"
         },
         {
@@ -23,6 +23,12 @@
             "numChildren": 0,
             "children": [],
             "fileName": "sortingalgorithms/quicksortfirstelementaspivot.html"
+        },
+        {
+            "text": "Heapsort",
+            "numChildren": 0,
+            "children": [],
+            "fileName": "sortingalgorithms/heapsort.html"
         }
     ]
 }

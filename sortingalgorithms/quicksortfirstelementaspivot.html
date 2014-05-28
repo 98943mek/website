@@ -1,6 +1,10 @@
 <div style="margin-left: 30px; margin-right: 30px; margin-bottom: 30px; text-align: justify;">
     <h1>Quicksort - First Element as Pivot</h1>
-			<p> Quicksort, or partition-exchange sort, is a sorting algorithm developed by Tony Hoare that, on average, makes O(n log n) comparisons to sort n items. In the worst case, it makes O(n<sup>2</sup>) comparisons, though this behavior is rare. Quicksort is often faster in practice than other O(n log n) algorithms. Additionally, quicksort's sequential and localized memory references work well with a cache. Quicksort is a comparison sort and, in efficient implementations, is not a stable sort. Quicksort can be implemented with an in-place partitioning algorithm, so the entire sort can be done with only O(log n) additional space used by the stack during the recursion.</p>
+        <p>Brief Details</p>
+        <p style="margin-left: 20px;">The quicksort algorithm is a divide-and-conquer algorithm. In each step it chooses a pivot, as for the this implementation it chooses the first element. Then it divides the array into 2 sets, one smaller than the pivot and one larger. Then the algorithm recurses into those 2 subarrays.</p>
+        <p>Time Complexity :</p>
+        <p style="margin-left:20px;">Best Case: O(nlogn)<br>Average Case: O(nlogn)<br>Worst Case: O(n<sup>2</sup>)</p>
+        <p>Implementation in C++</p>
     
     <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2

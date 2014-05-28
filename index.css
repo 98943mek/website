@@ -10,13 +10,12 @@ div {
 	height: 50px;
 	background-color: #4c4c4c;
 	width: 98.5%;
-	position: fixed;
+	position: relative;
 	margin-top: -20px;
 	margin-bottom: 10px;
 }
 
 .middle {
-	margin-top: 40px;
 	position: relative;
 }
 
@@ -50,9 +49,4 @@ ul.ulClass
 {
     color: #0000FF;
     cursor: pointer;
-}
-
-.actAsCategory
-{
-    cursor: default;
 }
